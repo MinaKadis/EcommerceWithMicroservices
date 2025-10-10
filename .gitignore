@@ -416,3 +416,11 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+# BMAD (local only)
+/.bmad-core
+/.claude
+/.gemini/commands/BMad
+/.github/chatmodes
+/.vscode
+/docs
+*.md
