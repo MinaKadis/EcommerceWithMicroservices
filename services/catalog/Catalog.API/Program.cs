@@ -1,4 +1,5 @@
 using Catalog.Application.Mappers;
+using Catalog.Application.Queries;
 using Catalog.Core.Repositories;
 using Catalog.Infrastructure.Data.Contexts;
 using Catalog.Infrastructure.Repositories;
@@ -14,7 +15,9 @@ builder.Services.AddControllers();
 
 builder.Services.AddAutoMapper(typeof(ProductMappingProfile).Assembly);
 
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
+builder.Services.AddMediatR(cfg => 
+cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly(),
+Assembly.GetAssembly(typeof(GetProductByIdQuery))));
 
 builder.Services.AddScoped<ICatalogContext, CatalogContext>();
 
