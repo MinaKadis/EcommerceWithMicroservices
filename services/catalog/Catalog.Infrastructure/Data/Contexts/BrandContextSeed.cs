@@ -12,7 +12,7 @@ namespace Catalog.Infrastructure.Data.Contexts
         {
             var hasbrands = await brandCollection.Find(_ => true).AnyAsync();
 
-            if (!hasbrands)
+            if (hasbrands)
                 return;
 
             var filePath = Path.Combine("Data", "SeedData", "brands.json");

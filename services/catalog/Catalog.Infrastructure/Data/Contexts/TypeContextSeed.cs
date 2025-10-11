@@ -12,7 +12,7 @@ namespace Catalog.Infrastructure.Data.Contexts
         {
             var hastypes = await typeCollection.Find(_ => true).AnyAsync();
 
-            if (!hastypes)
+            if (hastypes)
                 return;
 
             var filePath = Path.Combine("Data", "SeedData", "types.json");

@@ -12,7 +12,7 @@ namespace Catalog.Infrastructure.Data.Contexts
         {
             var hasProducts = await productCollection.Find(_ => true).AnyAsync();
 
-            if (!hasProducts)
+            if (hasProducts)
                 return;
 
             var filePath = Path.Combine("Data", "SeedData", "products.json");
