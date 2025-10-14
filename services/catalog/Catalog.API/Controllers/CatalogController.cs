@@ -91,5 +91,25 @@ namespace Catalog.API.Controllers
             var result = await _mediator.Send<bool>(command);
             return Ok(result);
         }
+
+        [HttpGet]
+        [Route("GetAllBrands")]
+        [ProducesResponseType(typeof(IList<BrandResponseDto>), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<IList<BrandResponseDto>>> GetAllBrands()
+        {
+            var query = new GetAllBrandsQuery();
+            var result = await _mediator.Send(query);
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [Route("GetAllTypes")]
+        [ProducesResponseType(typeof(IList<TypeResponseDto>), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<IList<TypeResponseDto>>> GetAllTypes()
+        {
+            var query = new GetAllTypesQuery();
+            var result = await _mediator.Send(query);
+            return Ok(result);
+        }
     }
 }
