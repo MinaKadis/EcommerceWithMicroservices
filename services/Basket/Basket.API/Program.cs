@@ -1,7 +1,7 @@
 using Basket.Application.Commands;
 using Basket.Application.Mappers;
 using Basket.Core.Repositories;
-using Basket.Infrastructrue.Repositories;
+using Basket.Infrastructure.Repositories;
 
 using System.Reflection;
 

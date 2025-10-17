@@ -5,7 +5,7 @@ using Microsoft.Extensions.Caching.Distributed;
 
 using Newtonsoft.Json;
 
-namespace Basket.Infrastructrue.Repositories
+namespace Basket.Infrastructure.Repositories
 {
     public class BasketRepository : IBasketRepository
     {
@@ -29,10 +29,13 @@ namespace Basket.Infrastructrue.Repositories
 
         public async Task<ShoppingCart> UpdateBasket(ShoppingCart cart)
         {
+            // Always upsert the basket for the given user
+            //await _redisCache.SetStringAsync(cart.UserName, JsonConvert.SerializeObject(cart));
+            //return await GetBasket(cart.UserName);
             var basket = await _redisCache.GetStringAsync(cart.UserName);
-            if (string.IsNullOrEmpty(basket))
+            if (basket != null)
             {
-                // Logic Return
+                //logic return 
                 return await GetBasket(cart.UserName);
             }
             else

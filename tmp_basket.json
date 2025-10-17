@@ -1,0 +1,6 @@
+{
+  "userName": "alice",
+  "items": [
+    {"quantity": 1, "price": 9.99, "productId": "p1", "productName": "item", "imageFile": "img.png"}
+  ]
+}

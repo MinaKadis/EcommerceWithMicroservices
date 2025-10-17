@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.Application", "servi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.Core", "services\Basket\Basket.Core\Basket.Core.csproj", "{078D765D-4C9D-47A3-AEF2-7C60AD2FF651}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.Infrastructrue", "services\Basket\Basket.Infrastructrue\Basket.Infrastructrue.csproj", "{9288DAD0-FFA6-4B10-8C38-A85057FE11C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.Infrastructure", "services\Basket\Basket.Infrastructure\Basket.Infrastructure.csproj", "{9288DAD0-FFA6-4B10-8C38-A85057FE11C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
